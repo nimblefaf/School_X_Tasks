@@ -18,12 +18,47 @@
 
 # print(web_address.lstrip('https://')) #оставит "reads.com/notifications"
 
-import string
 
-numbers: str = string.digits
-word: str = 'hell123o b32ob ho321w ar3e yo333u'
+# import string
 
-for num in numbers:
-    word = word.replace(num, '')
+# numbers: str = string.digits
+# word: str = 'hell123o b32ob ho321w ar3e yo333u'
 
-print(word)
+# for num in numbers:
+#     word = word.replace(num, '')
+
+# _word: str = None
+# _sum: float = 0.0
+# _prod: float = 0.0
+# for ch in word:
+#     if ch in numbers:
+#         continue
+
+words: str = 'Hello Bob, are you a bob? BOB!!!'
+
+# words.capitalize
+# words.upper()
+# words.lower()
+
+# words = words.lower().replace('bob', 'gregory')
+
+# words - words.find('Bob')
+
+# while True:
+#     bob_index = words.lower().find(bob)
+#     if bob_index == -1:
+#         break
+#     else:
+#         words = (
+#             words[:bob_index] +
+#             'Gregory' +
+
+#         )
+
+_string: str = "123"
+_list: list = [1, 2, 3]
+_tuple: tuple = (1, 2, 3)
+
+
+
+print(words)

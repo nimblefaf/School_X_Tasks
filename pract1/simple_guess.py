@@ -1,13 +1,12 @@
 # ввод - любое целое число
 # вывол - корень числа
 # если такого корня нет - "трудно, не смог"
-
 # def guess(num: int) -> int:
-
 # БЕЗ ПРОСТОГО ВЫВЕДЕНИЯ ИЗ ПОД КОРНЯ
+#
+# 
+# Выполнил Синюткин Андрей
 
-#81
-#9
 number = int(input("Введите число: "))
 
 def guess(num: int) -> int:
@@ -15,12 +14,9 @@ def guess(num: int) -> int:
         if num < 0:
             return -1
         elif n**2 == num:
-            return n
+            return "Найден корень: " + str(n)
         elif n == num:
-            return -1
+            return "Слишком сложно, не могу"
         
 result = guess(number)
-if result == -1:
-    print("Корень не найден")
-else:
-    print(f"Корень числа {number} = {result}")
+print(result)

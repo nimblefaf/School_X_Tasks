@@ -1,7 +1,9 @@
-from import_this import RACE_DATA
+from import_this import generate_race_data
+import random
 from datetime import timedelta
 
 winners_keys: list = []
+RACE_DATA = generate_race_data(random.randint(1,10))
 
 def search_for_winners(data: dict) -> list: #возвращает список ключей победителей, от первого места до третьего
     result = ['first', 'second', 'third']
@@ -13,9 +15,10 @@ def search_for_winners(data: dict) -> list: #возвращает список �
     return result
 
 def display_winners(winners: list) -> None:
+    first_line:str = f"Выиграл - {RACE_DATA[winners[0]]['RacerName']}!!! Поздравляем!!"
     print(
-    "\n" + f"Выиграл - {RACE_DATA[winners[0]]['RacerName']}!!! Поздравляем!!\n" +   # если ставить перед словом \n то IDE начинает ругаться на ASCII
-    "-" * 40 +                                                                      # "\nВыиграл" - плохо, "\n" + "Выиграл" - хорошо
+    "\n" + first_line + "\n" +   # если ставить перед словом \n то IDE начинает ругаться на ASCII
+    "-" * len(first_line) +                                                                      # "\nВыиграл" - плохо, "\n" + "Выиграл" - хорошо
     "\n\n" + "Первые три места:\n"
     )
     for i in range(len(winners)):

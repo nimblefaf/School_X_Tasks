@@ -9,7 +9,7 @@ def test_mask_list():
     print("проверяем тест маск лист")
     assert mask_list([1, 2, 3], [0, 1, 0]) == [0, 2, 0], 'маска работает неправильно'
 
-
+test_mask_list()
 answer = mask_list(a, b)
 print(answer)
 # answer = [val * b[i] for i, val in enumerate(a)]
